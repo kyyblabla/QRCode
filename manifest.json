@@ -1,15 +1,10 @@
 {
   "name": "QRCode",
   "version": "1.0",
-  "description": "QRCode",
+  "description": "A simple tool to generate QRCode",
   "permissions": [
     "tabs"
   ],
-  "background": {
-    "scripts": [
-      "background.js"
-    ]
-  },
   "browser_action": {
     "default_icon": "icon.png",
     "default_title": "QRCode",

@@ -7,11 +7,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .container {
-            width: 300px;
+        body {
+            font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
         }
 
-        .input .url-input {
+        .container {
+            width: 300px;
+            min-height: 350px;
+        }
+
+        .input {
+            position: relative;
+            display: inline-flex;
+            width: 100%;
+        }
+
+        .input input {
+            margin: 0;
+            max-width: 100%;
+            flex: 1 0 auto;
+            outline: 0;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            border-right-color: transparent !important;
+            transition: box-shadow .1s ease, border-color .1s ease;
+        }
+
+        .input input:focus {
+            border-color: #85b7d9;
+        }
+
+        .input button {
+            padding: 10px 20px;
+            outline: 0;
+            border: none;
+            background-color: #e0e1e2;
+            border-radius: 0 4px 4px 0;
+            user-select: none;
+            transition: opacity .1s ease, background-color .1s ease, color .1s ease, box-shadow .1s ease, background .1s ease;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .input button:focus {
+            background-color: #cacbcd;
         }
 
         .code {
@@ -22,12 +63,13 @@
 <body>
 <div class="container">
     <div class="input">
-        <input id="input" class="url-input" type="text">
-        <button>生成</button>
+        <input id="url-input" type="text" placeholder="Input something...">
+        <button id="generate-but">Generate</button>
     </div>
+    <br>
+    <br>
     <div class="code">
         <div id="qrcode">
-
         </div>
     </div>
 </div>
